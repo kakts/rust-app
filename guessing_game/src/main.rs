@@ -3,6 +3,7 @@ extern crate rand;
 
 use std::io;
 use std::cmp::Ordering;
+use std::num;
 use rand::Rng;
 fn main() {
     println!("Guess the number!");
@@ -34,6 +35,10 @@ fn main() {
             },
         };
 
+        let diff: u32 = guess - secret_number;
+        if diff < 5 {
+            println!("Very near");
+        }
         // Ordering is another enum, like Result.
         match guess.cmp(&secret_number) {
             Ordering::Less => println!("Too small!"),

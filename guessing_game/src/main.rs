@@ -26,8 +26,13 @@ fn main() {
         // trim() method eliminates \n from the input
         // parse method on strings parses a string into some kind of number.
         // the colon after guess tells Rust we'll annotate the variable's type
-        let guess: u32 = guess.trim().parse()
-            .expect("Please type a number!");
+        let guess: u32 = match guess.trim().parse() {
+            Ok(num) => num,
+            Err(_) => {
+                println!("Continue \n");
+                continue;
+            },
+        };
 
         // Ordering is another enum, like Result.
         match guess.cmp(&secret_number) {

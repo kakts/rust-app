@@ -4,3 +4,15 @@ version = "0.1.0"
 authors = ["Keita Akutsu <kakts.git@gmail.com>"]
 
 [dependencies]
+
+[[bin]]
+name = "main1"
+path = "src/main.rs"
+
+[[bin]]
+name = "clone"
+path = "src/clone.rs"
+
+[[bin]]
+name = "owner"
+path = "src/owner.rs"

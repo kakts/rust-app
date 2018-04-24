@@ -12,5 +12,9 @@ fn main() {
         x + 1
     };
 
-    println!("The value of y is: {}", five());
+    println!("The value of y is: {}, {}", five(), plus_one(6));
+}
+
+fn plus_one(x: i32) -> i32 {
+    x + 1
 }

@@ -16,3 +16,11 @@ path = "src/clone.rs"
 [[bin]]
 name = "owner"
 path = "src/owner.rs"
+
+[[bin]]
+name = "scope"
+path = "src/scope.rs"
+
+[[bin]]
+name = "mut_ref"
+path = "src/mut_ref.rs"

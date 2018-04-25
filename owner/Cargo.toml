@@ -24,3 +24,7 @@ path = "src/scope.rs"
 [[bin]]
 name = "mut_ref"
 path = "src/mut_ref.rs"
+
+[[bin]]
+name = "slice"
+path = "src/slice.rs"

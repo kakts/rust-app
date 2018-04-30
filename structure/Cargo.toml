@@ -12,3 +12,11 @@ path = "src/rectangles.rs"
 [[bin]]
 name = "format"
 path = "src/format.rs"
+
+[[bin]]
+name = "method"
+path = "src/method.rs"
+
+[[bin]]
+name = "method2"
+path = "src/method2.rs"

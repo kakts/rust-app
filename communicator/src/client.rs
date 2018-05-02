@@ -1,4 +1,4 @@
 // client module
-fn connect() {
-
+pub fn connect() {
+    println!("Hello connect");
 }

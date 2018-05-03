@@ -4,3 +4,11 @@ version = "0.1.0"
 authors = ["Keita Akutsu <kakts.git@gmail.com>"]
 
 [dependencies]
+
+[[bin]]
+name = "enumtype"
+script = "./src/enumtype.rs"
+
+[[bin]]
+name = "string"
+script = "./src/string.rs"

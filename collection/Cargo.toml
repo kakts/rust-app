@@ -12,3 +12,7 @@ script = "./src/enumtype.rs"
 [[bin]]
 name = "string"
 script = "./src/string.rs"
+
+[[bin]]
+name = "hashmap"
+script = "./src/hashmap.rs"

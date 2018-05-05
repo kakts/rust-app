@@ -10,9 +10,16 @@ fn main() {
 
     // hashmapの値取得
     let team_name = String::from("Blue");
+
+    // 結果はSome(&10)となる
+    // getはOption<&V>を返す
     let score = scores.get(&team_name);
 
     println!("score:{:?}", score);
+
+    for (key, value) in &scores {
+        println!("{}: {}", key , value);
+    }
     // hashmap生成2
     let teams = vec![String::from("Blue"), String::from("Yellow")];
     let initial_scores = vec![10, 50];

@@ -1,0 +1,10 @@
+[package]
+name = "error_handling"
+version = "0.1.0"
+authors = ["Keita Akutsu <kakts.git@gmail.com>"]
+
+[dependencies]
+
+
+[profile.release]
+panic = 'abort'

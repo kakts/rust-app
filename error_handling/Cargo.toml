@@ -13,5 +13,9 @@ src = "src/back.rs"
 name = "main"
 script = "./src/main.rs"
 
+[[bin]]
+name = "file"
+script = "./src/file.rs"
+
 [profile.release]
 panic = 'abort'

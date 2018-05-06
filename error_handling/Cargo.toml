@@ -5,6 +5,8 @@ authors = ["Keita Akutsu <kakts.git@gmail.com>"]
 
 [dependencies]
 
-
+[[bin]]
+name = "back"
+src = "src/back.rs"
 [profile.release]
 panic = 'abort'

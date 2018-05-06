@@ -8,5 +8,10 @@ authors = ["Keita Akutsu <kakts.git@gmail.com>"]
 [[bin]]
 name = "back"
 src = "src/back.rs"
+
+[[bin]]
+name = "main"
+script = "./src/main.rs"
+
 [profile.release]
 panic = 'abort'

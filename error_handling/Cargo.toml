@@ -17,5 +17,9 @@ script = "./src/main.rs"
 name = "file"
 script = "./src/file.rs"
 
+[[bin]]
+name = "guess"
+script = "./src/guess.rs"
+
 [profile.release]
 panic = 'abort'

@@ -10,4 +10,6 @@ fn main() {
             panic!("There was a problem opening the file: {:?}", error);
         }
     };
+
+    let f2 = File::open("dummy.txt").expect("Failed to open ");
 }

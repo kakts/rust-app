@@ -1,4 +1,7 @@
 use std::env;
+use std::fs::File;
+use std::io::prelude::*;
+
 fn main() {
     println!("Hello, world!");
 
@@ -12,6 +15,15 @@ fn main() {
     let filename = &args[2];
 
     println!("Searching for {}", query);
-
     println!("In file {}", filename);
+
+    // open file
+    let mut f = File::open(filename).expect("file not found");
+    let mut contents = String::new();
+
+    // read file 
+    f.read_to_string(&mut contents)
+        .expect("something went wrong reading the file");
+
+    println!("With text:\n {}", contents);
 }

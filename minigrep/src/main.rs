@@ -6,8 +6,6 @@ use std::process;
 use minigrep::Config;
 
 fn main() {
-    println!("Hello, world!");
-
     // read the command-line arguments.
     // notice: throw panic when invalid unicode string is passed.
     let args: Vec<String> = env::args().collect();

@@ -11,18 +11,13 @@ fn main() {
     // read the command-line arguments.
     // notice: throw panic when invalid unicode string is passed.
     let args: Vec<String> = env::args().collect();
-    println!("{:?}", args);
 
     // Using unwrap_or_else, we can set the original Error handling.
     // if Ok, it returns the value which OK holds.
     // if Err, it calls code in the closure.
     let config = Config::new(&args).unwrap_or_else(|err| {
-       println!("Problem parsing arguments: {}", err);
        process::exit(1); 
     });;
-
-    println!("Searching for {}", config.query);
-    println!("In file {}", config.filename);
 
    if let Err(e) = minigrep::run(config) {
        println!("Application error: {}", e);

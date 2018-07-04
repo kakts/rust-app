@@ -1,12 +1,11 @@
 fn main() {
-    let x = 4;
+    let x = vec![1, 2, 3];
 
-    // equal_to_xの引数でないのに,equal_to_xが定義されているのと同じスコープで定義される
-    // x変数をequal_to_xクロージャは使用できる。 
-    // これが関数の場合はコンパイルできない
-    // これをキャプチャという
-    let equal_to_x = |z| z == x;
+    // moveキーワードをつけることで、このタイミングでxの所有権がクロージャに渡る
+    let equal_to_x = move |z| z == x;
 
+    // すでにxの所有権は渡っているのでここでエラーになる
+    println!("Can't use x here: {:?}", x);
     let y = 4;
     assert!(equal_to_x(y));
 }

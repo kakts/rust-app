@@ -1,11 +1,8 @@
 fn main() {
-    let x = vec![1, 2, 3];
+    let v1 = vec![1, 2, 3];
+    let v1_iter = v1.iter();
 
-    // moveキーワードをつけることで、このタイミングでxの所有権がクロージャに渡る
-    let equal_to_x = move |z| z == x;
-
-    // すでにxの所有権は渡っているのでここでエラーになる
-    println!("Can't use x here: {:?}", x);
-    let y = 4;
-    assert!(equal_to_x(y));
+    for val in v1_iter {
+        println!("Got: {}", val);
+    }
 }
